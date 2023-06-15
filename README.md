@@ -16,19 +16,19 @@ These buttons provide functionality for controlling the application, selecting t
 # Solved Bugs #
 1)The export takes sometimes forever, maybe there is an issue with the SQL.
 
-solved by changing the query  [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
+The issue was resolved by modifying the query structure from a nested query to a join. By utilizing a join operation, the query was optimized for improved performance and readability. This change successfully addresses the problem and ensures the desired outcome is achieved [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
 
 2)The tool exports only prospect accounts, but it should only export active accounts.
 
-solved by changing Status from "O" to "A" [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
+Fixed the issue by changing the status value from "O" to "A" in the query expression [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
 
 3)The last character of the country gets cut off, please make sure the full name is shown.
 
-solved by changing the -2 to -1 on subString [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L101)
+Updated the second parameter from -2 to -1 to resolve the issue. The change was made to align with the method's requirement of specifying the length instead of the end index. This adjustment successfully addressed the original intention of removing the trailing comma [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L101)
 
 4)The selection of the path is not shown in the text field.
 
-solved by adding new label and putting the path in it [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L38)
+Fixed the issue by adding a new label and adjusting the code to update the label with the path obtained from the dialog. This solution resolves the problem of the function updating the same text in the button and ensures that the path is displayed correctly in the label [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L38)
 
 
 # Assumptions #
