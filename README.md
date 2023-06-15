@@ -15,6 +15,7 @@ Clicking on the "Export" button triggers an action where the application pulls a
 These buttons provide functionality for controlling the application, selecting the export file location, and exporting data from the database to a CSV file.
 # Assumptions #
 1- I assumed that the Status code for the Active Accounts is the letter "A". As I don't have access to the rest of the code or the actual DB, I couldn't verify that.
+
 2- I assumed that the only performance issue on the query was the nested query. There is a possibility that there could be other issues (ex: no indexes), but with no access to the actual DB it was hard to verify.
 
 
