@@ -16,11 +16,14 @@ These buttons provide functionality for controlling the application, selecting t
 # Solved Bugs #
 1)The export takes sometimes forever, maybe there is an issue with the SQL.
 
-The issue was resolved by modifying the query structure from a nested query to a join. By utilizing a join operation, the query was optimized for improved performance and readability. This change successfully addresses the problem and ensures the desired outcome is achieved [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
+The issue was resolved by modifying the query structure from a nested query to a join. By utilizing a join operation, the query was optimized for improved performance and readability.The change aims to address the problem as described in the official documentation [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
+
+>> However, in some cases where existence must be checked, a join yields better performance. Otherwise, the nested query must be processed for each result of the outer query to ensure elimination of duplicates. In such cases, a join approach would yield better results [Read Me](https://learn.microsoft.com/en-us/sql/relational-databases/performance/subqueries?view=sql-server-ver16).
+
 
 2)The tool exports only prospect accounts, but it should only export active accounts.
 
-Fixed the issue by changing the status value from "O" to "A" in the query expression [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
+As mentioned in the Assumptions section, the letter 'A' is just an assumption value which would represent the enum for active accounts. [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
 
 3)The last character of the country gets cut off, please make sure the full name is shown.
 
