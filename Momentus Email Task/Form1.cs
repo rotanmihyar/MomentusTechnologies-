@@ -23,9 +23,12 @@ namespace Momentus_Email_Task
 
         }
         string CSVPath = null;
+        ///<summary>
+         //this function is opening the Dialog to select the location on your local machine 
+        ///</summary>
         private void btnPath_Click(object sender, EventArgs e)
         {
-            //this function is opening the Dialog to select the location on your local machine 
+            
             dynamic objBrowserDialog = new FolderBrowserDialog();
             DialogResult objDialogResult = objBrowserDialog.ShowDialog();
             CSVPath = "";
@@ -35,10 +38,12 @@ namespace Momentus_Email_Task
                 PathLabel.Text ="Exported to : "+ CSVPath;
             }
         }
-
+        ///<summary>
+        // this function will export the csv to to the location that selected in the previous function
+        ///</summary>
         private void btnExport_Click(object sender, EventArgs e)
         {
-            // this function will export the csv to to the location that selected in the previous function
+        
             if (!string.IsNullOrEmpty(CSVPath))
             {
                 if (createExport())
@@ -55,11 +60,16 @@ namespace Momentus_Email_Task
                 MessageBox.Show("Please select a Path...");
             }
         }
-
+        ///<summary>
+        // terminating the app
+        ///</summary>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        ///<summary>
+            // this function will request data from the dp and call another function to save these data in csv
+        ///</summary>
 
         public bool createExport()
         {
@@ -104,9 +114,12 @@ namespace Momentus_Email_Task
             return bolReturn;
         }
 
+        ///<summary>
+            // this function will check if the file is exist will delete it and create a new one with the exported data.
+        ///</summary>
         public void createFile(string astrExport)
         {
-            // this function will check if the file is exist will delete it and create a new one with the exported data.
+        
             string strExportPath = null;
             try
             {
@@ -125,7 +138,9 @@ namespace Momentus_Email_Task
                 log(ex.Message);
             }
         }
-
+        ///<summary>
+         // here we are loging all the errors
+        ///</summary>
         public void log(string astrMsg)
         {
             // here we are loging all the errors
