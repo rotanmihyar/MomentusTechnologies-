@@ -68,7 +68,7 @@ namespace Momentus_Email_Task
             Application.Exit();
         }
         ///<summary>
-             /// this function will request data from the dp and call another function to save these data in csv
+        /// this function will request data from the dp and call another function to save these data in csv
         ///</summary>
 
         public bool createExport()
@@ -81,10 +81,20 @@ namespace Momentus_Email_Task
             bool bolReturn = false;
             try
             {
-                //query string
-                strSQL = " SELECT EV870_ACCT_CODE AS 'Code', EV870_NAME AS 'Name', EV870_CITY AS 'City', MM540_COUNTRY_MASTER.MM540_COUNTRY_NAME " +
-                    "AS 'Country' FROM EV870_ACCT_MASTER JOIN MM540_COUNTRY_MASTER ON MM540_COUNTRY_MASTER.MM540_COUNTRY_CODE = EV870_ACCT_MASTER.EV870_COUNTRY " +
-                    "WHERE EV870_CLASS = 'O' AND EV870_STATUS = 'A' AND EV870_CITY <> '' AND EV870_COUNTRY = 'GER'";
+                ///query string
+                strSQL = @"SELECT 
+                         ev870_acct_code AS 'Code', 
+                         ev870_name AS 'Name', 
+                         ev870_city AS 'City', 
+                         mm540_country_master.mm540_country_name AS 'Country' 
+                         FROM 
+                         ev870_acct_master 
+                         join mm540_country_master ON mm540_country_master.mm540_country_code = ev870_acct_master.ev870_country 
+                         WHERE 
+                         ev870_class = 'O' 
+                         AND ev870_status = 'A' 
+                         AND ev870_city <> '' 
+                         AND ev870_country = 'GER'S";
 
                 strConnectionString = "Data Source=euger-svr3\\sql2008r2;Initial Catalog=Briefing195;User ID=interface;Password=interface;";
                 using (SqlConnection objConnection = new SqlConnection(strConnectionString))
