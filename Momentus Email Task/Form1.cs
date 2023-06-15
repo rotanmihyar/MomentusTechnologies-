@@ -25,6 +25,7 @@ namespace Momentus_Email_Task
         string CSVPath = null;
         private void btnPath_Click(object sender, EventArgs e)
         {
+            //this function is opening the Dialog to select the location on your local machine 
             dynamic objBrowserDialog = new FolderBrowserDialog();
             DialogResult objDialogResult = objBrowserDialog.ShowDialog();
             CSVPath = "";
@@ -37,6 +38,7 @@ namespace Momentus_Email_Task
 
         private void btnExport_Click(object sender, EventArgs e)
         {
+            // this function will export the csv to to the location that selected in the previous function
             if (!string.IsNullOrEmpty(CSVPath))
             {
                 if (createExport())
@@ -69,6 +71,7 @@ namespace Momentus_Email_Task
             bool bolReturn = false;
             try
             {
+                //query string
                 strSQL = " SELECT EV870_ACCT_CODE AS 'Code', EV870_NAME AS 'Name', EV870_CITY AS 'City', MM540_COUNTRY_MASTER.MM540_COUNTRY_NAME AS 'Country' FROM EV870_ACCT_MASTER JOIN MM540_COUNTRY_MASTER ON MM540_COUNTRY_MASTER.MM540_COUNTRY_CODE = EV870_ACCT_MASTER.EV870_COUNTRY WHERE EV870_CLASS = 'O' AND EV870_STATUS = 'A' AND EV870_CITY <> '' AND EV870_COUNTRY = 'GER'";
                 strConnectionString = "Data Source=euger-svr3\\sql2008r2;Initial Catalog=Briefing195;User ID=interface;Password=interface;";
                 using (SqlConnection objConnection = new SqlConnection(strConnectionString))
@@ -103,6 +106,7 @@ namespace Momentus_Email_Task
 
         public void createFile(string astrExport)
         {
+            // this function will check if the file is exist will delete it and create a new one with the exported data.
             string strExportPath = null;
             try
             {
@@ -124,6 +128,7 @@ namespace Momentus_Email_Task
 
         public void log(string astrMsg)
         {
+            // here we are loging all the errors
             string strLogPath = null;
             strLogPath = Application.StartupPath + "\\" + Application.ProductName.Replace(" ", "_") + "_" + DateTime.Now.ToString("ddMMyyyy") + ".log";
             using (StreamWriter objStreamReader = new StreamWriter(strLogPath, true))
