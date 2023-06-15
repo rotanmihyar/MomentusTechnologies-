@@ -94,7 +94,7 @@ namespace Momentus_Email_Task
                          ev870_class = 'O' 
                          AND ev870_status = 'A' 
                          AND ev870_city <> '' 
-                         AND ev870_country = 'GER'S";
+                         AND ev870_country = 'GER'";
 
                 strConnectionString = "Data Source=euger-svr3\\sql2008r2;Initial Catalog=Briefing195;User ID=interface;Password=interface;";
                 using (SqlConnection objConnection = new SqlConnection(strConnectionString))
