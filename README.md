@@ -16,22 +16,22 @@ These buttons provide functionality for controlling the application, selecting t
 # Solved Bugs #
 1)The export takes sometimes forever, maybe there is an issue with the SQL.
 
-The issue was resolved by modifying the query structure from a nested query to a join. By utilizing a join operation, the query was optimized for improved performance and readability.The change aims to address the problem as described in the official documentation [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
+The issue was resolved by modifying the query structure from a nested query to a join. By utilizing a join operation, the query was optimized for improved performance and readability.The change aims to address the problem as described in the official documentation [link](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
 
 >> However, in some cases where existence must be checked, a join yields better performance. Otherwise, the nested query must be processed for each result of the outer query to ensure elimination of duplicates. In such cases, a join approach would yield better results [Read Me](https://learn.microsoft.com/en-us/sql/relational-databases/performance/subqueries?view=sql-server-ver16).
 
 
 2)The tool exports only prospect accounts, but it should only export active accounts.
 
-As mentioned in the Assumptions section, the letter 'A' is just an assumption value which would represent the enum for active accounts. [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
+As mentioned in the Assumptions section, the letter 'A' is just an assumption value which would represent the enum for active accounts. [link](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
 
 3)The last character of the country gets cut off, please make sure the full name is shown.
 
-Updated the second parameter from -2 to -1 to resolve the issue. The change was made to align with the method's requirement of specifying the length instead of the end index. This adjustment successfully addressed the original intention of removing the trailing comma [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L101)
+Updated the second parameter from -2 to -1 to resolve the issue. The change was made to align with the method's requirement of specifying the length instead of the end index. This adjustment successfully addressed the original intention of removing the trailing comma [link](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L101)
 
 4)The selection of the path is not shown in the text field.
 
-Fixed the issue by adding a new label and adjusting the code to update the label with the path obtained from the dialog. This solution resolves the problem of the function updating the same text in the button and ensures that the path is displayed correctly in the label [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L38)
+Fixed the issue by adding a new label and adjusting the code to update the label with the path obtained from the dialog. This solution resolves the problem of the function updating the same text in the button and ensures that the path is displayed correctly in the label [link](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L38)
 
 
 # Assumptions #
