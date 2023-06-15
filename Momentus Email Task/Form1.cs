@@ -80,17 +80,17 @@ namespace Momentus_Email_Task
             StringBuilder objExport = new StringBuilder();
             bool bolReturn = false;
             try
-            {
-                ///query string
-                strSQL = @"SELECT 
+            { ///query string
+              strSQL = @"
+                        SELECT 
                          ev870_acct_code AS 'Code', 
                          ev870_name AS 'Name', 
                          ev870_city AS 'City', 
                          mm540_country_master.mm540_country_name AS 'Country' 
-                         FROM 
+                        FROM 
                          ev870_acct_master 
                          join mm540_country_master ON mm540_country_master.mm540_country_code = ev870_acct_master.ev870_country 
-                         WHERE 
+                        WHERE 
                          ev870_class = 'O' 
                          AND ev870_status = 'A' 
                          AND ev870_city <> '' 
