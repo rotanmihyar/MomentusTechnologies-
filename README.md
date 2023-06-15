@@ -27,7 +27,7 @@ As mentioned in the Assumptions section, the letter 'A' is just an assumption va
 
 3)The last character of the country gets cut off, please make sure the full name is shown.
 
-Updated the second parameter from -2 to -1 to resolve the issue. The change was made to align with the method's requirement of specifying the length instead of the end index. This adjustment successfully addressed the original intention of removing the trailing comma. [link](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L101)
+Updated the second parameter from -2 to -1 to resolve the issue. The change was made to align with the method's requirement of specifying the length instead of the end index. This adjustment successfully addressed the original intention of removing the trailing comma. [link](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L114)
 
 4)The selection of the path is not shown in the text field.
 
