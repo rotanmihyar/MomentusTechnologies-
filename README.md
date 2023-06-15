@@ -2,7 +2,7 @@
 
 In the Windows desktop application, you will find three buttons with specific purposes:
 
-![alt text](https://raw.githubusercontent.com/rotanmihyar/MomentusTechnologies-/main/Screenshot.png)
+![alt text](https://raw.githubusercontent.com/rotanmihyar/MomentusTechnologies-/master/Screenshot.png)
 ## Exit
 This button is used to terminate the application. Clicking on the "Exit" button will close the application and end its execution.
 
@@ -13,6 +13,10 @@ By clicking on this button, you can select the location where you want to export
 Clicking on the "Export" button triggers an action where the application pulls all the data from the database. It then converts this data into a CSV format and saves it in the location you previously selected by clicking on the "CSV Path" button.
 
 These buttons provide functionality for controlling the application, selecting the export file location, and exporting data from the database to a CSV file.
+# Assumptions #
+1- I assumed that the Status code for the Active Accounts is the letter "A". As I don't have access to the rest of the code or the actual DB, I couldn't verify that.
+
+2- I assumed that the only performance issue on the query was the nested query. There is a possibility that there could be other issues (ex: no indexes), but with no access to the actual DB it was hard to verify.
 
 
 # How to Run Windows Desktop Application using C# .NET 7
