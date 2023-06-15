@@ -24,7 +24,7 @@ namespace Momentus_Email_Task
         }
         string CSVPath = null;
         ///<summary>
-         //this function is opening the Dialog to select the location on your local machine 
+             ///this function is opening the Dialog to select the location on your local machine 
         ///</summary>
         private void btnPath_Click(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace Momentus_Email_Task
             }
         }
         ///<summary>
-        // this function will export the csv to to the location that selected in the previous function
+            /// this function will export the csv to to the location that selected in the previous function
         ///</summary>
         private void btnExport_Click(object sender, EventArgs e)
         {
@@ -61,14 +61,14 @@ namespace Momentus_Email_Task
             }
         }
         ///<summary>
-        // terminating the app
+             /// terminating the app
         ///</summary>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
         ///<summary>
-            // this function will request data from the dp and call another function to save these data in csv
+             /// this function will request data from the dp and call another function to save these data in csv
         ///</summary>
 
         public bool createExport()
@@ -118,7 +118,7 @@ namespace Momentus_Email_Task
         }
 
         ///<summary>
-            // this function will check if the file is exist will delete it and create a new one with the exported data.
+            /// this function will check if the file is exist will delete it and create a new one with the exported data.
         ///</summary>
         public void createFile(string astrExport)
         {
@@ -142,11 +142,11 @@ namespace Momentus_Email_Task
             }
         }
         ///<summary>
-         // here we are loging all the errors
+             /// here we are loging all the errors
         ///</summary>
         public void log(string astrMsg)
         {
-            // here we are loging all the errors
+           
             string strLogPath = null;
             strLogPath = Application.StartupPath + "\\" + Application.ProductName.Replace(" ", "_") + "_" + DateTime.Now.ToString("ddMMyyyy") + ".log";
             using (StreamWriter objStreamReader = new StreamWriter(strLogPath, true))
