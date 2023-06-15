@@ -37,9 +37,6 @@ To run the Windows desktop application, please follow these steps:
 
 5. Double-click on the executable file to launch the Windows desktop application.
 
-## Additional Configuration
-In some cases, the application might require additional configuration before running. Please refer to the application's documentation or source code for any specific configuration instructions.
-
 ## Troubleshooting
 If you encounter any issues while running the Windows desktop application, please consider the following troubleshooting steps:
 
@@ -50,9 +47,6 @@ If you encounter any issues while running the Windows desktop application, pleas
 3. Check for any error messages or exceptions in the application's logs or console output.
 
 4. Consult the application's documentation or seek support from the project's maintainers for assistance.
-
-## Contributing
-If you would like to contribute to this project, please follow the standard guidelines for contributing as outlined in the project's repository.
 
 
 ## Support
