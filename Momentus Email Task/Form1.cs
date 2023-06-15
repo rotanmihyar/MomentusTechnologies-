@@ -28,14 +28,14 @@ namespace Momentus_Email_Task
         ///</summary>
         private void btnPath_Click(object sender, EventArgs e)
         {
-            
+
             dynamic objBrowserDialog = new FolderBrowserDialog();
             DialogResult objDialogResult = objBrowserDialog.ShowDialog();
             CSVPath = "";
             if (objDialogResult == DialogResult.OK)
             {
                 CSVPath = objBrowserDialog.SelectedPath + "\\export_" + DateTime.Now.ToString("ddMMyyyy") + ".csv";
-                PathLabel.Text ="Exported to : "+ CSVPath;
+                PathLabel.Text = "Exported to : " + CSVPath;
             }
         }
         ///<summary>
@@ -43,7 +43,7 @@ namespace Momentus_Email_Task
         ///</summary>
         private void btnExport_Click(object sender, EventArgs e)
         {
-        
+
             if (!string.IsNullOrEmpty(CSVPath))
             {
                 if (createExport())
@@ -82,7 +82,10 @@ namespace Momentus_Email_Task
             try
             {
                 //query string
-                strSQL = " SELECT EV870_ACCT_CODE AS 'Code', EV870_NAME AS 'Name', EV870_CITY AS 'City', MM540_COUNTRY_MASTER.MM540_COUNTRY_NAME AS 'Country' FROM EV870_ACCT_MASTER JOIN MM540_COUNTRY_MASTER ON MM540_COUNTRY_MASTER.MM540_COUNTRY_CODE = EV870_ACCT_MASTER.EV870_COUNTRY WHERE EV870_CLASS = 'O' AND EV870_STATUS = 'A' AND EV870_CITY <> '' AND EV870_COUNTRY = 'GER'";
+                strSQL = " SELECT EV870_ACCT_CODE AS 'Code', EV870_NAME AS 'Name', EV870_CITY AS 'City', MM540_COUNTRY_MASTER.MM540_COUNTRY_NAME " +
+                    "AS 'Country' FROM EV870_ACCT_MASTER JOIN MM540_COUNTRY_MASTER ON MM540_COUNTRY_MASTER.MM540_COUNTRY_CODE = EV870_ACCT_MASTER.EV870_COUNTRY " +
+                    "WHERE EV870_CLASS = 'O' AND EV870_STATUS = 'A' AND EV870_CITY <> '' AND EV870_COUNTRY = 'GER'";
+
                 strConnectionString = "Data Source=euger-svr3\\sql2008r2;Initial Catalog=Briefing195;User ID=interface;Password=interface;";
                 using (SqlConnection objConnection = new SqlConnection(strConnectionString))
                 {
@@ -119,7 +122,7 @@ namespace Momentus_Email_Task
         ///</summary>
         public void createFile(string astrExport)
         {
-        
+
             string strExportPath = null;
             try
             {
