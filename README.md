@@ -2,7 +2,7 @@
 
 In the Windows desktop application, you will find three buttons with specific purposes:
 
-![alt text](https://raw.githubusercontent.com/rotanmihyar/MomentusTechnologies-/main/Screenshot%202023-06-15%20153404.png)
+![alt text](https://raw.githubusercontent.com/rotanmihyar/MomentusTechnologies-/main/Screenshot.png)
 ## Exit
 This button is used to terminate the application. Clicking on the "Exit" button will close the application and end its execution.
 
