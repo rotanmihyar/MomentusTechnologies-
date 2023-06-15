@@ -13,6 +13,24 @@ By clicking on this button, you can select the location where you want to export
 Clicking on the "Export" button triggers an action where the application pulls all the data from the database. It then converts this data into a CSV format and saves it in the location you previously selected by clicking on the "CSV Path" button.
 
 These buttons provide functionality for controlling the application, selecting the export file location, and exporting data from the database to a CSV file.
+# Solved Bugs #
+1)The export takes sometimes forever, maybe there is an issue with the SQL.
+
+solved by changing the query  [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
+
+2)The tool exports only prospect accounts, but it should only export active accounts.
+
+solved by changing Status from "O" to "A" [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L85)
+
+3)The last character of the country gets cut off, please make sure the full name is shown.
+
+solved by changing the -2 to -1 on subString [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L101)
+
+4)The selection of the path is not shown in the text field.
+
+solved by adding new label and putting the path in it [on line](https://github.com/rotanmihyar/MomentusTechnologies-/blob/master/Momentus%20Email%20Task/Form1.cs#L38)
+
+
 # Assumptions #
 1- I assumed that the Status code for the Active Accounts is the letter "A". As I don't have access to the rest of the code or the actual DB, I couldn't verify that.
 
